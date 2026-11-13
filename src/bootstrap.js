@@ -47,7 +47,11 @@ function showLoadError(error) {
   console.error(error);
 }
 
-fetch(configUrl)
-  .then(parseConfigResponse)
-  .then(startApp)
-  .catch(showLoadError);
+if (location.protocol === 'file:') {
+  showLoadError(new Error('不能直接打开 index.html。请在项目目录运行 npm start，然后访问 http://127.0.0.1:4173/'));
+} else {
+  fetch(configUrl)
+    .then(parseConfigResponse)
+    .then(startApp)
+    .catch(showLoadError);
+}

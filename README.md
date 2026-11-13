@@ -21,7 +21,7 @@
 npm start
 ```
 
-打开终端显示的地址（默认是 `http://127.0.0.1:4173/`）。项目也可以部署到 [GitHub Pages](https://docs.github.com/zh/pages) 等静态网站服务。页面会从同一站点读取比赛配置，因此请通过本地服务器或部署地址访问。
+打开终端显示的地址（默认是 `http://127.0.0.1:4173/`）。不要双击 `index.html` 通过 `file://` 打开：浏览器会阻止页面读取 `config/tournament.json`，并显示 `Failed to fetch`。项目也可以部署到 [GitHub Pages](https://docs.github.com/zh/pages) 等静态网站服务。
 
 运行 Chrome 测试：
 
